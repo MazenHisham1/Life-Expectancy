@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+missingno
+scipy
+scikit-learn
+xgboost
+lightgbm
+catboost
+optuna
+anvil-uplink
+Flask
+flask-cors
+joblib
+gunicorn==21.2.0
