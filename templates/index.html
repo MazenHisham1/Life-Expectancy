@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Predictor Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Health Prediction Form</h1>
+  <form id="health-form">
+    <label for="status">Status</label>
+    <select id="status" name="status">
+      <option value="">-- Select Status --</option>
+      <option value="developed">Developed</option>
+      <option value="developing">Developing</option>
+    </select>
+
+    <label for="adultMortality">Adult Mortality</label>
+    <input type="number" id="adultMortality" placeholder="Enter Adult Mortality Value">
+
+    <label for="infantDeaths">Infant deaths</label>
+    <input type="number" id="infantDeaths" placeholder="Enter Number of Infant Deaths">
+
+    <label for="alcohol">Alcohol</label>
+    <input type="number" id="alcohol" placeholder="Enter Alcohol Percentage">
+
+    <label for="hepatitisB">Hepatitis_B</label>
+    <input type="number" id="hepatitisB" placeholder="Enter Hepatitis_B Percentage">
+
+    <label for="measles">Measles</label>
+    <input type="number" id="measles" placeholder="Enter Measles Percentage">
+
+    <label for="bmi">BMI</label>
+    <input type="number" id="bmi" placeholder="Enter BMI Percentage">
+
+    <label for="polio">Polio</label>
+    <input type="number" id="polio" placeholder="Enter Polio Percentage">
+
+    <label for="totalExpenditure">Total expenditure</label>
+    <input type="number" id="totalExpenditure" placeholder="Enter Total expenditure Percentage">
+
+    <label for="diphtheria">Diphtheria</label>
+    <input type="number" id="diphtheria" placeholder="Enter Diphtheria Percentage">
+
+    <label for="hivAids">HIV/AIDS</label>
+    <input type="number" id="hivAids" placeholder="Enter Deaths per 1000 live births HIV/AIDS">
+
+    <label for="gdp">GDP</label>
+    <input type="number" id="gdp" placeholder="Enter GDP Percentage">
+
+    <label for="population">Population</label>
+    <input type="number" id="population" placeholder="Enter Number of Population">
+
+    <label for="thinness">Thinness 10-19 years</label>
+    <input type="number" id="thinness" placeholder="Enter Thinness Percentage">
+
+    <label for="incomeComp">Income composition of resources</label>
+    <input type="number" id="incomeComp" placeholder="Enter Income composition of resources">
+
+    <label for="schooling">Schooling</label>
+    <input type="number" id="schooling" placeholder="Enter Schooling (years)">
+
+    <button type="submit">Predict</button>
+  </form>
+
+  <div id="predictionResult" class="prediction-column">
+    <h2>Predicted Value</h2>
+    <p id="predictionValue">--</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById('health-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Placeholder for predictive logic
+    document.getElementById('predictionValue').textContent = "Predicted value will appear here.";
+  });
+</script>
+
+</body>
+</html>
