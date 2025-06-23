@@ -57,11 +57,10 @@
       <input id="Schooling" type="number" step="0.01" required />
     </label>
 
-    <button type="submit">Predict</button>
-  </form>
+<button type="button" id="predict-btn">Predict</button>  </form>
 
-  <h2 id="result">Predicted value will appear here.</h2>
-
+<h2>Predicted value: <span id="prediction-output">...</span></h2>
+  
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
