@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Life Expectancy Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <h1>Life Expectancy Predictor</h1>
+  <form id="predictForm">
+    <label>Status:
+      <input id="Status" placeholder="Developing or Developed" required />
+    </label>
+    <label>Adult Mortality:
+      <input id="Adult_Mortality" type="number" required />
+    </label>
+    <label>infant_deaths:
+      <input id="infant_deaths" type="number" required />
+    </label>
+    <label>Alcohol:
+      <input id="Alcohol" type="number" step="0.01" required />
+    </label>
+    <label>Hepatitis_B:
+      <input id="Hepatitis_B" type="number" required />
+    </label>
+    <label>Measles:
+      <input id="Measles" type="number" required />
+    </label>
+    <label>BMI:
+      <input id="BMI" type="number" step="0.01" required />
+    </label>
+    <label>Polio:
+      <input id="Polio" type="number" required />
+    </label>
+    <label>Total_expenditure:
+      <input id="Total_expenditure" type="number" step="0.01" required />
+    </label>
+    <label>Diphtheria:
+      <input id="Diphtheria" type="number" required />
+    </label>
+    <label>HIV_AIDS:
+      <input id="HIV_AIDS" type="number" step="0.01" required />
+    </label>
+    <label>GDP:
+      <input id="GDP" type="number" required />
+    </label>
+    <label>Population:
+      <input id="Population" type="number" required />
+    </label>
+    <label>thinness_10_to_19_years:
+      <input id="thinness_10_to_19_years" type="number" step="0.01" required />
+    </label>
+    <label>Income_composition_of_resources:
+      <input id="Income_composition_of_resources" type="number" step="0.01" required />
+    </label>
+    <label>Schooling:
+      <input id="Schooling" type="number" step="0.01" required />
+    </label>
+
+    <button type="submit">Predict</button>
+  </form>
+
+  <h2 id="result">Predicted value will appear here.</h2>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
