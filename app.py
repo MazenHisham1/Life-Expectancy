@@ -6,22 +6,20 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app)
 
-# Load model and columns
+# Load your trained model and column names
 Input_columns = joblib.load('Columns.pkl')
 Model = joblib.load('Life expectancy.pkl')
 
-# Route for your home page
-@app.route('/', methods=['GET'])
-def home():
+@app.route("/", methods=['GET'])
+def index():
     return render_template('index.html')
 
-# Route for prediction
 @app.route('/predict', methods=['POST'])
-def predict():
+def predict_endpoint():
     data = request.get_json(force=True)
-    test_df = pd.DataFrame(columns=Input_columns)
 
-    # Fill columns
+    test_df = pd.DataFrame(columns=Input_columns)
+    test_df.loc[0, :] = None  # init empty
     test_df.at[0, "Status"] = data.get('Status')
     test_df.at[0, "Adult_Mortality"] = data.get('Adult_Mortality')
     test_df.at[0, "infant_deaths"] = data.get('infant_deaths')
