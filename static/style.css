@@ -1,53 +1,108 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e0eaff);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
+  text-align: center;
+  font-size: 2.2rem;
   color: #333;
+  margin-bottom: 24px;
+  font-weight: 600;
 }
 
 form {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  grid-template-columns: 1fr 2fr;
+  gap: 14px 24px;
+  margin-bottom: 24px;
 }
 
 label {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-  color: #555;
+  background: #ff4c4c;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: right;
+  align-self: center;
+  box-shadow: 0 2px 8px rgba(255, 76, 76, 0.3);
+  letter-spacing: 0.5px;
 }
 
 input {
-  padding: 0.5rem;
-  margin-top: 0.25rem;
+  padding: 10px 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fafafa;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff4c4c;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 76, 76, 0.1);
+  outline: none;
 }
 
 button {
-  grid-column: span 2;
-  padding: 0.75rem;
-  background: #0077ff;
+  grid-column: 1 / span 2;
+  background: #ff4c4c;
   color: white;
+  padding: 14px;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
-
 button:hover {
-  background: #005dcc;
+  background: #e03c3c;
+  transform: scale(1.03);
 }
 
-#result {
-  margin-top: 1rem;
-  color: #222;
+.prediction-column {
+  background: #f9f9ff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.prediction-column h2 {
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+.prediction-column p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff4c4c;
+}
+
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+  label {
+    text-align: left;
+  }
+  button {
+    width: 100%;
+  }
 }
