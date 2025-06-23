@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Life Expectancy Predictor</h1>
-  <form id="predictForm">
+  <form id="predict-form">
     <label>Status:
       <input id="Status" placeholder="Developing or Developed" required />
     </label>
@@ -56,10 +56,10 @@
     <label>Schooling:
       <input id="Schooling" type="number" step="0.01" required />
     </label>
+    <button type="button" id="predict-btn">Predict</button>
+  </form>
 
-<button type="button" id="predict-btn">Predict</button>  </form>
-
-<h2>Predicted value: <span id="prediction-output">...</span></h2>
+  <h2>Predicted value: <span id="prediction-output">...</span></h2>
   
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
