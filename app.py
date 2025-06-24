@@ -38,7 +38,6 @@ def predict_endpoint():
     test_df.at[0, "Schooling"] = data.get('Schooling')
 
     prediction = Model.predict(test_df)[0]
-    return jsonify({"prediction": float(prediction)})
-
+    return jsonify({"prediction": float(round(prediction,2))})
 if __name__ == "__main__":
     app.run(debug=True)
