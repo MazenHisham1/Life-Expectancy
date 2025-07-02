@@ -89,6 +89,11 @@ The dataset includes information from multiple countries over several years, foc
 This project is open-sourced under the [MIT License](LICENSE).
 
 ---
+## Try the Model
+You can try the live prediction model here:
+👉 https://web-production-04fa1.up.railway.app/
+
+---
 
 ## 🙌 Contributions
 
