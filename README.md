@@ -86,7 +86,7 @@ The dataset includes information from multiple countries over several years, foc
 
 ## 📄 License
 
-This project is open-sourced under the [MIT License](LICENSE).
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
 ---
 ## Try the Model
