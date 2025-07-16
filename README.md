@@ -2,6 +2,7 @@
 
 This project explores global health and development indicators to identify key factors influencing `**life expectancy**` across countries and years.  
 Using a comprehensive dataset containing socio-economic, health, and demographic variables, the analysis includes both exploratory data analysis (EDA) and predictive modeling to uncover patterns and make data-driven predictions about life expectancy.
+
 ---
 
 ## 📁 Dataset Description
